@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    //For some reason you need the above two lines first in the pug?!
+
+    h1=title
+    
+    //make sure your lines are now indented past lines 1 and 3 
+    
+    <form method="POST" action="/new">
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='first and last' name='name')
+            br
+            br
+        div.form-group
+            label(for='message') Message:
+            input#message.form-control(type='text', placeholder='Type here' name='message')
+            
+            button.btn.btn-primary(type='submit') Submit
+            
+    </form>
